@@ -5,27 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ASOL DIGITAL</title>
     <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="./CSS/new.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="icon" href="ASSETS/LOGO/logo 2.png" type="image/png"> 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-    </script>
-    <script type="text/javascript"
-    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="text/javascript">
-(function(){
-  emailjs.init({
-    publicKey: "NAgetjM71Gt9QtTlo",
-  });
-})();
-</script>
+    
 </head>
 <body>
     <header class="header">
         <a href="#home" class="logo">
             <img src="ASSETS/logo/logo.png" alt="Asol Digital">
         </a>
-        <div><i class='bx bx-menu' id="menu-icon"></i></div>
+        <div><i class='bx bx-menu toggleBtn' id="menu-icon"></i></div>
 
         
         <nav class="navbar">
@@ -273,7 +263,7 @@
         <section class="contact" id="contact">
             <h2 class="heading">Contact <span>Me</span></h2>
 
-            <form onsubmit="redirectToThankYou();">
+            <!-- <form onsubmit="redirectToThankYou();">
                 <div class="input-group">
                     <div class="input-box">
                         <input type="text" name="userName" id="name" placeholder="Full Name" required>
@@ -290,8 +280,26 @@
                     <input type="Submit" name="send" class="btn" onclick="sendMail()">
 
                 </div>
-            </form>
+            </form> -->
 
+            <form id="contactForm">
+                <div class="input-group">
+                  <div class="input-box">
+                    <input type="text" name="userName" id="name" placeholder="Full Name" required>
+                    <input type="email" name="userEmail" id="email" placeholder="Email" required>
+                  </div>
+                  <div class="input-box">
+                    <input type="number" name="userPhone" id="Phone" placeholder="Phone Number" required>
+                    <input type="text" id="Address" name="userAddress" placeholder="Address">
+                  </div>
+                </div>
+              
+                <div class="input-group-2">
+                  <textarea name="userMessage" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+                  <input type="submit" name="send" class="btn" value="Send">
+                </div>
+              </form>
+              
         </section>
 
 
@@ -342,6 +350,18 @@
        
             </p>
         </footer>
-
+        <script src="./JS/index.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+        </script>
+        <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <!-- <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        publicKey: "NAgetjM71Gt9QtTlo",
+      });
+    })();
+    </script> -->
 </body>
 </html>
